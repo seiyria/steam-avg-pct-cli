@@ -1,0 +1,30 @@
+{
+  "name": "steam-avg-cli",
+  "version": "1.0.0",
+  "description": "Calculate what contributes to your steam average game completion percentage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seiyria/steam-avg-cli"
+  },
+  "keywords": [
+    "steam",
+    "cli",
+    "calc"
+  ],
+  "author": "Kyle Kemp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seiyria/steam-avg-cli/issues"
+  },
+  "homepage": "https://github.com/seiyria/steam-avg-cli",
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "minimist": "^1.1.1",
+    "q": "^1.4.1",
+    "superagent": "^1.2.0"
+  }
+}
