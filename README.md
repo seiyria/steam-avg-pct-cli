@@ -1,18 +1,20 @@
 # steam-avg-pct-cli
-A simple way to get steam stats.
+A simple way to get steam stats. Eventually I'd like to make a web UI, but until Steam removes the following clause from their [Terms of Use](http://steamcommunity.com/dev/apiterms), or makes a "shareable" API key system, that can't easily happen (everyone would need to register their own API key, worst case).
 
-Pre-requisites:
+> You agree to keep your Steam Web API key confidential, and not to share it with any third party. This license is personal to you and specific to your Application. You agree that you will be personally responsible for the use of your Steam Web API key.
+
+## Pre-requisites:
 
 * nodejs
 
-Usage:
+## Usage:
 
 * Download the repository (via `git clone` or download zip)
 * Run `npm install`
 * [Obtain an API key from Steam](http://steamcommunity.com/dev/apikey)
 * Run `node index.js --api-key=XXX --vanity-url=yourvanityurl` or `node index.js --api-key=XXX --steam-id=yoursteam64bitid`
 
-A sample output is as follows:
+## Sample Output
 ```
 $ node index.js --api-key=XXX --vanity-url=seiyria
 Resolving vanity url "seiyria"...
