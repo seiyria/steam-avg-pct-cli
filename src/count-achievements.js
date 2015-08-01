@@ -14,6 +14,11 @@ var displayLowest = function(games, avgPct) {
 		return game.percent < avgPct;
 	});
 
+	if(!filtered.length) {
+		console.log('Congratulations, all of your games are 100%!');
+		return;
+	}
+
 	var maxStrLen = getLongestName(filtered);
 
 	var lowestSorted = _.sortBy(filtered, function(game) {
@@ -32,6 +37,11 @@ var displayHighest = function(games, avgPct) {
 	var filtered = _.filter(games, function(game) {
 		return game.percent >= avgPct && game.percent != 100;
 	});
+
+	if(!filtered.length) {
+		console.log('Congratulations, all of your games above average are 100%!');
+		return;
+	}
 
 	var maxStrLen = getLongestName(filtered);
 

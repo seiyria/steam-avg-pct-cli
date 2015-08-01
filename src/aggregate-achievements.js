@@ -20,7 +20,10 @@ module.exports = function(argv, steamid, games) {
 			.get(constants.STEAM_URL.ACHIEVEMENTS)
 			.query(requestObj)
 			.end(function(e, res) {
-				//swallow errors here, they don't matter
+				if(e) {
+					//swallow errors here, they don't matter
+					return defer.resolve({max: 0, earned: 0});
+				}
 				var body = res.body.playerstats;
 
 				if(body.error || !body.achievements) {
